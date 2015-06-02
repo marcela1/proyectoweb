@@ -9,7 +9,7 @@
 </head>
 <body>
 	<header>
-<div class="container ">
+<div class="container">
 			<div class="row">
 				<div class="col-xs-6">
 				<br></br>
@@ -22,7 +22,7 @@
 		<div class="container ">
 			<div class="row">
 				<div class="col-xs-6" >
-					<img src="orca3.jpg" width="1150px"  >
+					<img src="imagenes\orca3.jpg" width="1150px"  >
 					
 				</div>
 			</div>
@@ -38,7 +38,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            
+            <a href="#" class="navbar-brand">Logotipo</a>
         </div>
  
         <div id="navbarCollapse" class="collapse navbar-collapse">
@@ -55,52 +55,31 @@
 </nav>
 		
 		
-		<div class="container  ">
+		<div class="container ">
 			<div class="row">
 				<div class="col-xs-8" >
 					<h1>Encuesta</h1>
-					<form name="Formulario" method="post" action="comprobar.php">
+					<form id="form1"name="Formulario" method="post" action="conexion.php">
 				<table>
-					<tr>
-						<td>Nombre:</td>
-						<td><input type="text" name="Nom" value=""></td>
-					</tr>
-					<tr>
-					<tr>
-						<td colspan="2"><br>Sexo:</td> <!--Colspan combina columnas a una sola-->
-					</tr>
-					<tr>
-						<td>
-							<input type="radio" id="M" name="sexo" value="Masculino">
-							<label for="M">Masculino</label>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<input type="radio" id="F" name="sexo" value="Femenino">
-							<label for="F">Femenino</label>
-						</td>
-					</tr>
-					<tr>
-						
+				
 					<tr>
 						<td colspan="2"><br>¿Te parece bien que las orcas esten en cautiverio?</td>
 					</tr>
 					<tr>
 						<td>
-							<input type="radio" id="S" name="cautiverio" value="Si">
+							<input type="radio" id="S" name="cautiverio" value="Estoy de acuerdo">
 							<label for="S">Estoy de acuerdo</label>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<input type="radio" id="N" name="cautiverio" value="No">
+							<input type="radio" id="N" name="cautiverio" value="No estoy de acuerdo">
 							<label for="N">No estoy de acuerdo</label>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<input type="radio" id="M" name="cautiverio" value="igual">
+							<input type="radio" id="M" name="cautiverio" value="Me da igual">
 							<label for="M">Me da igual</label>
 						</td>
 					</tr>
@@ -152,7 +131,8 @@
 					</tr>
 					<tr>
 						<td>¿Cuantos años crees que llegan a vivir las orcas?</td>
-						<td><input type="text" name="años" value=""></td><tr></tr> <tr></tr><td><input type="submit"/></td>
+						<td><input type="text" name="años" id="textarea"value="" size=3 ></td><tr></tr> <tr></tr><td>
+						<input type="submit" name="button" id="button" value="Guardar" onclick="this.form.action= 'conexion.php'"/></td>
 
 
 					</tr>
@@ -171,13 +151,7 @@
 		</div>
 
 		
-	</div>
-			<footer class="container-fluid">
-			<div class="row">
-			<div class="col-xs-12 color6">
-			<small>Derechos Reservados &copy;</small>
-			</div>
-		</div>
+	
 	<script type="bootstrap-3.3.4-dist/js/bootstrap.js"></script>
 
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
