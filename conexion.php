@@ -6,6 +6,8 @@ $link =mysql_connect("localhost","Marcela","12nose");
 		mysql_select_db("proyecto",$link) ;
 	}
 	else 
+      
+     
 		echo "Fallo la conexion a la Base de Datos";
 
 	if (isset($_POST["cautiverio"])  && !empty($_POST['cautiverio'])) {
@@ -37,15 +39,26 @@ $link =mysql_connect("localhost","Marcela","12nose");
       
       if ($error == "false"){
         $que = "INSERT INTO encuesta (pregunta1, pregunta2,pregunta3,pregunta4,pregunta5) "; 
-		$que.= "VALUES ('".$cautiverio."', '".$sabes."', '".$sabes1."','".$aleta."','".$años."') "; 
-		$res = mysql_query($que, $link) or die(mysql_error()); 
-		mysql_close($link);
-		echo "Registro finalizado con exito";
+		    $que.= "VALUES ('".$cautiverio."', '".$sabes."', '".$sabes1."','".$aleta."','".$años."') "; 
+		    $res = mysql_query($que, $link) or die(mysql_error()); 
+		    mysql_close($link);
+		    echo "<script>";
+        echo "alert('Registro finalizado con exito');" ;
+        echo "location.href='proyecto5.html';";
+        echo "</script>";  
+     
+   
 
 		 }
 		else {
-			echo "Error al registrar los datos, Favor de revisar los campos.";
-			mysql_close($link);
+      
+       $mensaje = "Error al registrar los datos, Favor de revisar los campos";
+        echo "<script>";
+        echo "alert('$mensaje');" ;
+        echo "history.back();";
+        echo "location.href='proyecto5.html';";
+        echo "</script>";  
+      	mysql_close($link);
 		}
 
 ?>
